@@ -42,9 +42,14 @@ navbar:
   - slug: blog
     title: Blog
 
+## Required to build individual files within _readings --> what i read this week.
 collections:
   readings:
     output: true
+    # permalink: /what-i-read-this-week/:title/
+
+include: ["_readings"]
+##
 
 exclude:
   - "gulp"
