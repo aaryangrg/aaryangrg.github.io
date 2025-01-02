@@ -1,13 +1,14 @@
 ---
 layout: default
-title: Home
+title: What I Read This Week
+permalink: /what-i-read-this-week/
 ---
 
-{% include intro.html %}
+{% include wirdw_intro.html %}
 
 <section class="post-list">
   <div class="container">
-    {% for post in site.posts %} {% unless post.next %}
+    {% for post in site.readings %} {% unless post.next %}
     <h2 class="category-title">{{ post.date | date: '%Y' }}</h2>
     {% else %} {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %} {%
     capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %} {% if year

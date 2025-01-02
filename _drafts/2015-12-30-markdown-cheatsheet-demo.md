@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Markdown Cheatsheet Demo"
-comments: true
+comments: false
 description: "Markdown Cheatsheet Demo..."
 keywords: "markdown, typography components, dummy content"
 ---
@@ -47,32 +47,34 @@ Let's say you have text that you want to refer with a footnote, you can do that 
 1. First order list item
 2. Second item
 
-* Unordered list can use asterisks
-- Or minuses
-+ Or pluses
+- Unordered list can use asterisks
+
+* Or minuses
+
+- Or pluses
 
 <div class="divider"></div>
 
 ## Code Blocks
 
 ```javascript
-var modularpattern = (function() {
-    // your module code goes here
-    var sum = 0 ;
+var modularpattern = (function () {
+  // your module code goes here
+  var sum = 0;
 
-    return {
-        add:function() {
-            sum = sum + 1;
-            return sum;
-        },
-        reset:function() {
-            return sum = 0;    
-        }  
-    }   
-}());
-alert(modularpattern.add());    // alerts: 1
-alert(modularpattern.add());    // alerts: 2
-alert(modularpattern.reset());  // alerts: 0
+  return {
+    add: function () {
+      sum = sum + 1;
+      return sum;
+    },
+    reset: function () {
+      return (sum = 0);
+    },
+  };
+})();
+alert(modularpattern.add()); // alerts: 1
+alert(modularpattern.add()); // alerts: 2
+alert(modularpattern.reset()); // alerts: 0
 ```
 
 ```python
@@ -91,18 +93,18 @@ But let's throw in a <b>tag</b>.
 
 ### Table 1: With Alignment
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
+| Tables        |      Are      |  Cool |
+| ------------- | :-----------: | ----: |
 | col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| col 2 is      |   centered    |   $12 |
+| zebra stripes |   are neat    |    $1 |
 
 ### Table 2: With Typography Elements
 
-Markdown | Less | Pretty
---- | --- | ---
-*Still* | `renders` | **nicely**
-1 | 2 | 3
+| Markdown | Less      | Pretty     |
+| -------- | --------- | ---------- |
+| _Still_  | `renders` | **nicely** |
+| 1        | 2         | 3          |
 
 <div class="divider"></div>
 
@@ -110,17 +112,17 @@ Markdown | Less | Pretty
 
 The HTML `<hr>` element is for creating a "thematic break" between paragraph-level elements. In markdown, you can create a `<hr>` with any of the following:
 
-* `___`: three consecutive underscores
-* `---`: three consecutive dashes
-* `***`: three consecutive asterisks
+- `___`: three consecutive underscores
+- `---`: three consecutive dashes
+- `***`: three consecutive asterisks
 
 renders to:
 
-___
+---
 
 ---
 
-***
+---
 
 <div class="divider"></div>
 
@@ -135,8 +137,8 @@ ___
 ![Minion](http://octodex.github.com/images/minion.png)
 
 ---
+
 Footnote:
 
 [^1]: 1: Footnote number one yeah baby!
-
 [^2]: 2: A footnote you can link to - [click here!](#)

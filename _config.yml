@@ -1,34 +1,34 @@
 # Site settings
-title_left    : "Think"
-title_right   : "space" # default: ""
-description   : "Minimalist Jekyll theme for technical writing blog."
-keywords      : "Jekyll, theme, free, download, SEO, blog, web, minimalist, thinkspace"
-url           : https://heiswayi.github.io/thinkspace # site url
-baseurl       : "" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank
-cover         : "" # image uri like logo/cover image for site seo
+title_left: "Gargs"
+title_right: "blog" # default: ""
+description: ""
+keywords: ""
+url: https://aaryangrg.github.io/ # site url
+baseurl: "" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank
+cover: "" # image uri like logo/cover image for site seo
 
-google_analytics  : UA-XXXXX-XX
-twitter_username  : ""
-comments_enabled  : false # if enabled (set to true), please provide your disqus_username
-disqus_shortname  : ""
-postshare_enabled : false
+google_analytics: UA-XXXXX-XX
+twitter_username: ""
+comments_enabled: false # if enabled (set to true), please provide your disqus_username
+disqus_shortname: ""
+postshare_enabled: false
 
 # Build settings
-permalink   : /:year/:title/
-markdown    : kramdown
-highlighter : rouge
+permalink: /:year/:title/
+markdown: kramdown
+highlighter: rouge
 
-source      : ./
-destination : ./_site
+source: ./
+destination: ./_site
 
 # Sass configuration
 sass:
-  sass_dir  : assets/scss
-  style     : compressed # expanded
+  sass_dir: assets/scss
+  style: compressed # expanded
 
 # Author settings
 author:
-  name     : "John Doe"
+  name: "Aaryan Garg"
 
 plugins:
   - jekyll-sitemap
@@ -37,10 +37,14 @@ plugins:
 
 # navbar pages
 navbar:
-  - slug : about
+  - slug: about
     title: About
-  - slug : blog
+  - slug: blog
     title: Blog
+
+collections:
+  readings:
+    output: true
 
 exclude:
   - "gulp"
