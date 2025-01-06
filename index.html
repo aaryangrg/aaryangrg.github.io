@@ -23,6 +23,9 @@ title: Home
           >{{ post.title }}</a
         >
       </div>
+      <p class="read-time">
+        {{ post.content | number_of_words | divided_by: 180.0 | ceil }} min read
+      </p>
     </article>
     {% endfor %}
   </div>
