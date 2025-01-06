@@ -1,8 +1,96 @@
 {% if site.postshare_enabled %}
-<aside class="share">
+<!-- Direct CSS in HTML -->
+<style>
+  .share-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
 
-  <p>If you liked this article and think others should read it, please share it on <a href="http://twitter.com/share?text={{page.title}}&amp;url={{ page.url | prepend: site.baseurl | prepend: site.url }}&amp;via={{ site.twitter_username }}"
-  onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Twitter</a> or <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | prepend: site.baseurl | prepend: site.url }}" onclick="window.open(this.href, 'facebook-share', 'width=550,height=235');return false;">Facebook</a>.</p>
+  .share-buttons a,
+  .share-buttons button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    transition: opacity 0.3s ease;
+  }
 
-</aside>
+  .share-buttons a:hover,
+  .share-buttons button:hover {
+    opacity: 0.8; /* Adds a hover effect */
+  }
+
+  .share-buttons img {
+    width: 24px; /* Adjust size of icons */
+    height: 24px;
+    object-fit: contain;
+  }
+</style>
+
+<div class="share-buttons">
+  <a
+    href="https://twitter.com/share?url={{ site.url }}{{ page.url }}&text={{ page.title }}"
+    target="_blank"
+    class="share-button twitter"
+    title="Share on X"
+  >
+    <img
+      src="{{ '../assets/icons/square-x-twitter-brands-solid.svg' | relative_url }}"
+      alt="Share on X"
+    />
+  </a>
+  <a
+    href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}&summary={{ page.excerpt | strip_html }}"
+    target="_blank"
+    class="share-button linkedin"
+    title="Share on LinkedIn"
+  >
+    <img
+      src="{{ '../assets/icons/linkedin-brands-solid.svg' | relative_url }}"
+      alt="Share on LinkedIn"
+    />
+  </a>
+  <a
+    href="https://reddit.com/submit?url={{ site.url }}{{ page.url }}&title={{ page.title }}"
+    target="_blank"
+    class="share-button reddit"
+    title="Share on Reddit"
+  >
+    <img
+      src="{{ '../assets/icons/square-reddit-brands-solid.svg' | relative_url }}"
+      alt="Share on Reddit"
+    />
+  </a>
+  <button class="share-button copy-link" title="Copy Link" onclick="copyLink()">
+    <img
+      src="{{ '../assets/icons/link-solid.svg' | relative_url }}"
+      alt="Copy Link"
+    />
+  </button>
+  <br/>
+  <br/>
+</div>
+
+<!-- JavaScript for copy link -->
+<script>
+  function copyLink() {
+    const url = `${window.location.origin}${window.location.pathname}`;
+    navigator.clipboard
+      .writeText(url)
+      .then(() => {
+        alert("Link copied to clipboard!");
+      })
+      .catch((err) => {
+        console.error("Error copying link:", err);
+        alert("Failed to copy link.");
+      });
+  }
+</script>
 {% endif %}

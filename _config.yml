@@ -8,10 +8,10 @@ baseurl: "" # apply repo name like "/myproject" if used under gh-pages branch, e
 cover: "" # image uri like logo/cover image for site seo
 
 google_analytics: G-ZJP1KD3N2T
-twitter_username: ""
+twitter_username: "cybgarg"
 comments_enabled: false # if enabled (set to true), please provide your disqus_username
 disqus_shortname: ""
-postshare_enabled: false
+postshare_enabled: true
 
 # Build settings
 # permalink: /:year/:title/
