@@ -1,0 +1,43 @@
+tag_colors:
+  Deep Learning: "#f3e5f5" # Light Purple
+  AI: "#e1f5fe" # Light Blue
+  Neuroscience: "#fbe9e7" # Soft Peach
+  Programming: "#ffecb3" # Pale Yellow
+  LLMs: "#dcedc8" # Light Green
+  Astrophysics: "#ffccbc" # Soft Coral
+  Biology: "#b3e5fc" # Sky Blue
+  Tech: "#c8e6c9" # Mint Green
+  Business: "#e6ee9c" # Soft Lime
+  History: "#d1c4e9" # Light Lavender
+  Politics: "#ffab91" # Warm Orange
+  Podcasts: "#ffe082" # Golden Yellow
+  Economics: "#f0f4c3" # Soft Olive
+  Agents: "#ffd54f" # Pastel Gold
+  Semiconductors: "#c5cae9" # Soft Blue
+  Databases: "#ffebee" # Blush Pink
+  Metaverse: "#f8bbd0" # Rosy Pink
+  Cyber-security: "#c8e6c9" # Soft Teal
+  Venture Capital: "#ffcdd2" # Light Red
+  Blockchain: "#d1f2eb" # Pastel Cyan
+
+border_colors:
+  Deep Learning: "#d1b9d6" # Darker Purple
+  AI: "#b3d3e0" # Darker Blue
+  Neuroscience: "#e0b5a7" # Darker Peach
+  Programming: "#e6c47e" # Deeper Yellow
+  LLMs: "#b0c79b" # Deeper Green
+  Astrophysics: "#e69a85" # Darker Coral
+  Biology: "#82b0cf" # Deep Sky Blue
+  Tech: "#96b49a" # Darker Mint
+  Business: "#c4cf77" # Deeper Lime
+  History: "#a394c2" # Deeper Lavender
+  Politics: "#e07a5f" # Darker Orange
+  Podcasts: "#d6b051" # Golden Brown
+  Economics: "#c8cb99" # Darker Olive
+  Agents: "#e6b97e" # Deeper Gold
+  Semiconductors: "#9298c5" # Deep Blue
+  Databases: "#d6a5a7" # Deep Blush
+  Metaverse: "#c48ba2" # Deep Rosy Pink
+  Cyber-security: "#7cae9b" # Darker Teal
+  Venture Capital: "#e57373" # Darker Red
+  Blockchain: "#9dc6be" # Deeper Cyan
