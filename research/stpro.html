@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Spatio-Temporal Video Grounding.">
+  <meta name="keywords" content="Weakly-Supervised, Spatio-Temporal Video Grounding">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>STPro : Spatial and Temporal Progressive Learning for Weakly Supervised Spatio-Temporal Video Grounding</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/bulma.min.css">
+  <link rel="stylesheet" href="/assets/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="/assets/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="/assets/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="/assets/css/index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="/assets/js/fontawesome.all.min.js"></script>
+  <script src="/assets/js/bulma-carousel.min.js"></script>
+  <script src="/assets/js/bulma-slider.min.js"></script>
+  <script src="/assets/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">STPro : Spatial and Temporal Progressive Learning for Weakly Supervised Spatio-Temporal Video Grounding</h1>
+          <br>
+          <h1 class="title is-3 publication-title">CVPR 2025</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+                <a href="https://aaryangrg.github.io/">Aaryan Garg</a><sup>1</sup>,</span>
+            <span class="author-block">
+                <a href="https://akash2907.github.io/">Akash Kumar</a><sup>2</sup>,</span>
+            <span class="author-block">
+                <a href="https://www.crcv.ucf.edu/person/yogesh-singh-rawat/">Yogesh Singh Rawat</a><sup>2</sup>
+            </span>
+            </div>
+            <div class="is-size-5 publication-authors">
+                <span class="author-block"><sup>1</sup> BITS Pilani</span><br>
+                <span class="author-block"><sup>2</sup> University of Central Florida</span>
+            </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper (coming soon)</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video (coming soon)</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (coming soon)</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div>
+        <img src='/assets/images/research/stpro/trg_failures.png' alt='SSL' style='width:100%;height:100%;'>
+      </div>
+      <h2 class="subtitle has-text-centered" style="font-size: 1rem;">
+        <b>Temporal Referral Grounding (TRG) Failures:</b> Removing the last action from a multi-action caption causes the model’s temporal prediction to shift incorrectly. It <b>mispredicts 65%</b> of the time when trimming the first action and <b>54%</b> when trimming the last, indicating poor action understanding. As scenes grow more complex with multiple actors, the model <b>struggles to ground both the correct actor type (e.g., woman) and referral attributes (e.g., brown hair)</b>.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- <video id="teaser" autoplay muted loop playsinline height="100%"> -->
+        <!-- <source src="./images/.jpg"
+                type="video/mp4"> -->
+      <!-- </video> -->
+      <div>
+        <img src='/assets/images/research/stpro/stpro_overview.png' alt='SSL' style='width:100%;height:100%;'>
+      </div>
+      <h2 class="subtitle has-text-centered" style="font-size: 1rem;">
+        <b>STPro Overview:</b> STPro applies parallel spatial and temporal curricula to address TRG’s shortcomings. <b>Sub-Action Temporal Curriculum Learning (SA-TCL)</b> incrementally builds action and composition understanding by breaking down complex captions. <b>Congestion-Guided Spatial Curriculum (CG-SCL)</b>, comprising <b>Soft-Label Filtering (SLF)</b> and <b>Congestion-Guided Sampling (CGS)</b>, helps the model progressively learn actor-type and referral-attribute grounding by transitioning from similar to more distinct backgrounds, enhancing discriminative feature learning.
+        </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            In this work, we study Weakly Supervised Spatio-Temporal Video Grounding (WSTVG), a challenging task of localizing subjects spatio-temporally in videos using only textual queries and no bounding box supervision. Inspired by recent advances in vision-language foundation models, we investigate their utility for WSTVG, leveraging their zero-shot grounding capabilities. However, we find that a simple adaptation lacks essential spatio-temporal grounding abilities. To bridge this gap, we introduce <b>Tubelet Referral Grounding (TRG)</b>, which connects textual queries to tubelets to enable spatio-temporal predictions. Despite its promise, TRG struggles with compositional action understanding and dense scene scenarios. To address these limitations, we propose <b>STPro</b>, a novel progressive learning framework with two key modules: <b>(1) Sub-Action Temporal Curriculum Learning (SA-TCL)</b>, which incrementally builds compositional action understanding, and <b>(2) Congestion-Guided Spatial Curriculum Learning (CG-SCL)</b>, which adapts the model to complex scenes by spatially increasing task difficulty. STPro achieves state-of-the-art results on three benchmark datasets, with improvements of <b>1.0% on VidSTG-Declarative</b> and <b>3.0% on HCSTVG-v1</b>. 
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video (coming soon)</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Results. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Results</h2>
+        <div>
+          <img src='/assets/images/research/stpro/hcstvg_tables.png' alt='SSL' style='width:100%;height:50%;'>
+        </div>
+        <div>
+          <img src='/assets/images/research/stpro/vidstg_table.png' alt='SSL' style='width:100%;height:50%;'>
+        </div>
+      </div>
+    </div>
+    <!--/ Results. -->
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Qualitative Analysis</h2>
+        
+        <div>
+          <img src='/assets/images/research/stpro/cgscl_improvements.png' alt='SSL' style='width:100%;height:100%;'>
+          <h2 class="subtitle has-text-centered" style="font-size: 1rem;">
+            <b>Spatial Grounding Improvement:</b> TRG misidentifies the actor, while TRG + STPro refines localization, despite similar temporal boundary prediction. <b>Red = ground truth, blue = TRG, violet = TRG + STPro</b>.
+          </h2>
+        </div>
+
+        <br>
+
+        <div>
+          <img src='/assets/images/research/stpro/satcl_improvements.png' alt='SSL' style='width:100%;height:100%;'>
+          <h2 class="subtitle has-text-centered" style="font-size: 1rem;">
+            <b>Temporal Grounding Improvement:</b> TRG mispredicts temporal boundaries, causing spatial errors. TRG + STPro refines temporal boundary, achieving near-perfect localization.
+          </h2>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <!-- <h2 class="title">BibTeX</h2>
+    <pre><code>@article{kumar2025contextual,
+      title={Contextual Self-paced Learning for Weakly Supervised Spatio-Temporal Video Grounding},
+      author={Kumar, Akash and Kira, Zsolt and Rawat, Yogesh Singh},
+      journal={arXiv preprint arXiv:2501.17053},
+      year={2025}
+    }</code></pre> -->
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
