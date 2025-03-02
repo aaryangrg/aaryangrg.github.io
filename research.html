@@ -1,0 +1,68 @@
+---
+layout: default
+title: Research
+permalink: /research/
+---
+
+{% include research_intro.html %}
+
+<section class="post-list">
+  <div class="container">
+    {% assign sorted_papers = site.research | sort: "date" | reverse %} {% for
+    paper in sorted_papers %}
+    <article
+      class="post-item"
+      style="
+        margin-bottom: 32px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #ccc;
+      "
+    >
+      <div style="display: flex; align-items: flex-start; gap: 16px">
+        {% if paper.image %}
+        <img
+          src="{{ paper.image }}"
+          alt="Paper Image"
+          style="width: 200px; height: auto; border-radius: 8px"
+        />
+        {% endif %}
+        <div style="flex: 1">
+          <strong style="font-size: 18px; display: block; margin-bottom: 8px"
+            >{{ paper.title }}</strong
+          >
+          <span style="font-weight: bold; display: block; margin-bottom: 4px"
+            >{{ paper.authors }}</span
+          >
+          <em style="color: #555; display: block; margin-bottom: 4px"
+            >{{ paper.venue }}</em
+          >
+          {% if paper.status %}
+          <em style="color: #888; display: block; margin-bottom: 8px"
+            >{{ paper.status }}</em
+          >
+          {% endif %}
+          <p style="margin-top: 8px; margin-bottom: 16px">
+            {{ paper.description }}
+          </p>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px">
+            {% for link in paper.links %}
+            <a
+              href="{{ link.url }}"
+              style="
+                color: #007bff;
+                font-weight: bold;
+                text-decoration: none;
+                border-right: 1px solid #ccc;
+                padding-right: 10px;
+                margin-right: 10px;
+              "
+              >{{ link.label }}</a
+            >
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>

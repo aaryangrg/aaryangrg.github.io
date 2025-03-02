@@ -47,8 +47,11 @@ collections:
   readings:
     output: true
     # permalink: /what-i-read-this-week/:title/
+  research:
+    output: false
+    # permalink: /research/:path/
 
-include: ["_readings"]
+include: ["_readings", "_research"]
 ##
 
 exclude:

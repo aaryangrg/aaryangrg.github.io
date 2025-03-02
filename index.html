@@ -7,23 +7,30 @@ title: Home
 
 <section class="post-list">
   <div class="container">
-    {% for post in site.posts %} {% unless post.next %}
-    <h2 class="category-title">{{ post.date | date: '%Y' }}</h2>
-    {% else %} {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %} {%
-    capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %} {% if year
-    != nyear %}
-    <h2 class="category-title">{{ post.date | date: '%Y' }}</h2>
-    {% endif %} {% endunless %}
-    <article class="post-item">
+    {% assign sorted_posts = site.posts | sort: "date" | reverse %} {% assign
+    last_year = "" %} {% for post in sorted_posts %} {% assign year = post.date
+    | date: '%Y' %} {% if year != last_year %}
+    <h2 class="category-title" style="margin-bottom: 16px">{{ year }}</h2>
+    {% assign last_year = year %} {% endif %}
+
+    <article
+      class="post-item"
+      style="
+        margin-bottom: 32px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #ccc;
+      "
+    >
       <span class="post-meta date-label">{{ post.date | date: "%b %d" }}</span>
-      <div class="article-title">
+      <div class="article-title" style="margin-bottom: 12px">
         <a
           class="post-link"
           href="{{ post.url | prepend: site.baseurl | prepend: site.url }}"
-          >{{ post.title }}</a
         >
+          {{ post.title }}
+        </a>
       </div>
-      <p class="read-time">
+      <p class="read-time" style="margin-bottom: 12px">
         {{ post.content | number_of_words | divided_by: 180.0 | ceil }} min read
       </p>
     </article>
