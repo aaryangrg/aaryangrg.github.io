@@ -9,7 +9,7 @@ links:
   - label: "Project Page"
     url: "/research/stpro"
   - label: "Paper"
-    url: ""
+    url: "https://arxiv.org/pdf/2502.20678"
   - label: "Code"
     url: "https://github.com/aaryangrg/STPro"
   - label: "Poster"
