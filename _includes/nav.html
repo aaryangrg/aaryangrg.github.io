@@ -7,7 +7,15 @@
     </h1>
     <ul class="navbar">
       <li>
-        <a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">Blog</a>
+        <a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}"
+          >About Me</a
+        >
+      </li>
+      |
+      <li>
+        <a href="{{ '/blog' | prepend: site.baseurl | prepend: site.url }}"
+          >Blog</a
+        >
       </li>
       |
       <li>
@@ -22,17 +30,6 @@
           >Research</a
         >
       </li>
-      <!-- <li>
-        <a href="{{ '/research' | prepend: site.baseurl | prepend: site.url }}"
-          >Research</a
-        >
-      </li> -->
-      <!-- <li>
-        <a href="{{ '/about' | prepend: site.baseurl | prepend: site.url }}"
-          >About me</a
-        >
-      </li> -->
-      <!-- <li><a href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" target="_blank">RSS</a></li> -->
     </ul>
   </div>
 </nav>
