@@ -1,0 +1,110 @@
+.about-me-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif;
+}
+
+/* Dark mode styling for GitHub box */
+.github-style-box.dark-mode {
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(73, 255, 182, 0.2);
+}
+
+.dark-mode .github-header {
+  padding: 10px 16px;
+  background-color: #161b22;
+  border-bottom: 1px solid #30363d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dark-mode .repo-path {
+  color: #8b949e;
+  font-size: 14px;
+}
+
+.dark-mode .edit-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #58a6ff;
+  padding: 0;
+}
+
+.dark-mode .github-content {
+  padding: 16px;
+  background-color: #0d1117;
+  color: #c9d1d9;
+}
+
+.dark-mode .emoji {
+  margin-right: 8px;
+  display: inline-block;
+  font-size: 1.5em; /* Increased size of the emoji */
+}
+
+.dark-mode h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-weight: 600;
+  border-bottom: 1px solid #21262d;
+  padding-bottom: 0.3em;
+  color: #7ee787; /* Neon green for headings */
+  text-shadow: 0 0 5px rgba(126, 231, 135, 0.3);
+}
+
+.dark-mode p {
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.dark-mode .project-list {
+  list-style-type: square;
+  padding-left: 20px;
+  margin-top: 8px;
+}
+
+.dark-mode .project-list li {
+  margin-bottom: 8px;
+}
+
+.dark-mode a {
+  color: #58a6ff; /* Bright blue for links */
+  text-decoration: none;
+  text-shadow: 0 0 3px rgba(88, 166, 255, 0.3);
+  transition: all 0.2s ease;
+}
+
+.dark-mode a:hover {
+  text-decoration: none;
+  color: #79c0ff;
+  text-shadow: 0 0 8px rgba(88, 166, 255, 0.5);
+}
+
+.dark-mode .ascii-container {
+  margin-top: 24px;
+  padding: 16px;
+  border-top: 1px solid #21262d;
+  text-align: center;
+  height: 500px; /* Increased height for the container */
+  /* overflow-y: auto; Enable vertical scrolling if content still overflows */
+}
+.dark-mode .ascii-art {
+  font-family: monospace;
+  white-space: pre;
+  display: inline-block;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #39d353; /* Neon green text for ASCII art */
+  text-shadow: 0 0 5px rgba(57, 211, 83, 0.4);
+  margin: 0;
+  transition: opacity 0.5s ease;
+  border: none; /* Removed surrounding border */
+}

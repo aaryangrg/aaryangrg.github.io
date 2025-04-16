@@ -1,0 +1,69 @@
+#roadmap-widget {
+  width: 100%;
+  max-width: 800px;
+  height: 400px;
+  overflow: hidden;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  position: relative;
+  background: #cce6ff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+}
+
+#roadmap-container {
+  width: 1600px;
+  height: 800px;
+  position: relative;
+  background: linear-gradient(#cce6ff, #e6f7ff);
+}
+
+.character {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  z-index: 5;
+}
+
+.milestone {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+}
+
+.deco {
+  position: absolute;
+  width: 60px;
+  height: auto;
+  z-index: 1;
+}
+
+#popup {
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 10px;
+  display: flex;
+  gap: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  width: 200px;
+}
+
+#popup img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.popup-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+}
+
+.hidden {
+  display: none;
+}
